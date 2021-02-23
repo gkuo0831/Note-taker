@@ -13,15 +13,16 @@ module.exports = (app) => {
     const id = cuid();
     newNote.push({ ...req.body, id });
 
-    fs.writeFileSync("Develop/db/db,json", JSON.stringify(newNote));
+    fs.writeFileSync("./db/db.json", JSON.stringify(newNote));
 
     res.json(newNote);
   });
+
   app.delete("/api/notes/:id", (req, res) => {
     const id = req.params.id;
-    const newData = noteNote.filter((note) => note.id !== id);
-    fs.writeFileSync("Develop/db/db.json", JSON.stringify(newNote));
-    console.log(newNote);
-    res.send(JSON.stringify(newNote));
+    const newData = newNote.filter((note) => note.id !== id);
+    fs.writeFileSync("./db/db.json", JSON.stringify(newData));
+    console.log(newData);
+    res.send(JSON.stringify(newData));
   });
 };
