@@ -9,7 +9,7 @@ module.exports = (app) => {
     res.json(newNote);
   });
 
-  api.post("/api/notes", function (req, res) {
+  app.post("/api/notes", function (req, res) {
     const id = cuid();
     newNote.push({ ...req.body, id });
 
