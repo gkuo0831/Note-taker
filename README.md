@@ -7,6 +7,6 @@
 
 # Links:
 
-https://github.com/gkuo0831/Note-taker
-https://drive.google.com/file/d/1Hz_y8Xoxxi7ltdDPhccfkbHGwI_9Rv14/view
-https://whispering-shelf-03382.herokuapp.com
+- https://github.com/gkuo0831/Note-taker
+- https://drive.google.com/file/d/1Hz_y8Xoxxi7ltdDPhccfkbHGwI_9Rv14/view
+- https://whispering-shelf-03382.herokuapp.com
