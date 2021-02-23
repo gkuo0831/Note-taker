@@ -1,10 +1,27 @@
 const fs = require("fs");
-const path = require("path");
+const cuid = require("cuid");
+const util = require("util");
+
+const newNote = require("../db/db.json");
 
 module.exports = (app) => {
-  fs.readFile("../db/db.json");
-
   app.get("/api/notes", function (req, res) {
-    res.json(notes);
+    res.json(newNote);
+  });
+
+  api.post("/api/notes", function (req, res) {
+    const id = cuid();
+    newNote.push({ ...req.body, id });
+
+    fs.writeFileSync("Develop/db/db,json", JSON.stringify(newNote));
+
+    res.json(newNote);
+  });
+  app.delete("/api/notes/:id", (req, res) => {
+    const id = req.params.id;
+    const newData = noteNote.filter((note) => note.id !== id);
+    fs.writeFileSync("Develop/db/db.json", JSON.stringify(newNote));
+    console.log(newNote);
+    res.send(JSON.stringify(newNote));
   });
 };
